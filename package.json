@@ -1,0 +1,26 @@
+{
+  "name": "choo-sse",
+  "version": "1.0.0",
+  "description": "Small wrapper around server-sent event browser API, for choo apps",
+  "main": "index.js",
+  "scripts": {
+    "test": "standard --verbose | snazzy",
+    "start": "node example/server.js"
+  },
+  "keywords": [
+    "web",
+    "event source",
+    "choo",
+    "server sent events"
+  ],
+  "author": "Yerko Palma",
+  "license": "MIT",
+  "devDependencies": {
+    "choo": "^6.6.0",
+    "fastify": "^0.35.0",
+    "fastify-bankai": "^0.3.1",
+    "fastify-sse": "^0.1.5",
+    "snazzy": "^7.0.0",
+    "standard": "^10.0.3"
+  }
+}
