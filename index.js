@@ -24,20 +24,20 @@ function sse (route, opts) {
       eventSource = new EventSource(route)
       state.sse = {}
       Object.defineProperty(state.sse, 'state', { get: function () {
-          if (eventSource.readyState === 0) return 'CONNECTING'
-          if (eventSource.readyState === 1) return 'OPEN'
-          if (eventSource.readyState === 2) return 'CLOSED'
+        if (eventSource.readyState === 0) return 'CONNECTING'
+        if (eventSource.readyState === 1) return 'OPEN'
+        if (eventSource.readyState === 2) return 'CLOSED'
           // unlikely, but stills
-          return 'UNKNOWN'
-        }
+        return 'UNKNOWN'
+      }
       })
       Object.defineProperty(state.sse, 'url', { get: function () {
-          return eventSource.url
-        }
+        return eventSource.url
+      }
       })
       Object.defineProperty(state.sse, 'withCredentials', { get: function () {
-          return eventSource.withCredentials
-        }
+        return eventSource.withCredentials
+      }
       })
       eventSource.onmessage = function (e) {
         emitter.emit(events.MESSAGE, e)
