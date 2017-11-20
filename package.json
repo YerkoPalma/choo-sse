@@ -1,6 +1,6 @@
 {
   "name": "choo-sse",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Small wrapper around server-sent event browser API, for choo apps",
   "main": "index.js",
   "scripts": {
